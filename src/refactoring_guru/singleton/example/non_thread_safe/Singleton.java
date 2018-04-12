@@ -1,8 +1,8 @@
 package refactoring_guru.singleton.example.non_thread_safe;
 
-public final class Singleton {
+final class Singleton {
     private static Singleton instance;
-    public String value;
+    String value;
 
     private Singleton(String value) {
         // Этот код эмулирует медленную инициализацию.
@@ -14,7 +14,7 @@ public final class Singleton {
         this.value = value;
     }
 
-    public static Singleton getInstance(String value) {
+    static Singleton getInstance(String value) {
         if (instance == null) {
             instance = new Singleton(value);
         }
